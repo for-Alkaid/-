@@ -7,6 +7,8 @@ import axios from 'axios'
 import 'echarts-liquidfill'
 import VueRouter from 'vue-router'
 import router from './router/index'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 import { 
   Icon, Row, Col,  Table, TableColumn, Button, Dialog, Link
@@ -31,6 +33,7 @@ Vue.use(Button)
 Vue.use(Dialog)
 Vue.use(Link)
 Vue.use(VueRouter)
+Vue.use(ElementUI);
 
 new Vue({
   router,

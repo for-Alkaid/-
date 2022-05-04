@@ -17,4 +17,8 @@ export default {
     let url = `/covid-info/list?t=${Math.random()}`
     return request.get(url)
   },
+  getMockData() {
+    let url = '/covid-mock'
+    return request.post(url)
+  }
 }
