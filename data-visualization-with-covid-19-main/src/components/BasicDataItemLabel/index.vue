@@ -39,9 +39,11 @@ export default {
   border-radius: 5px;
 }
 .incremento-up-value {
+  font-size: 12px;
   color: #60FE5E;
 }
 .incremento-down-value {
+  font-size: 12px;
   color: #F44182;
 }
 .basic-data-item-title {

@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@antv/g6": "^4.6.4",
     "@jiaminghi/data-view": "^2.10.0",
     "@vue/compiler-sfc": "^3.1.4",
     "axios": "^0.21.1",

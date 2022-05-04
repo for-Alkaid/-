@@ -2,6 +2,10 @@
   <div class="container">
     <!-- 顶部 -->
     <div class="top-header">
+      <div class="top-header-left">
+        <router-link to="/zero-patient"><el-button type="info" round>零号病人</el-button></router-link>&nbsp;&nbsp;
+        <router-link to="/covid19-graph-mock"><el-button type="info" round>疫情扩散模拟</el-button> </router-link>
+      </div>
       <div class="title">
         <h1>{{ title }}</h1>
         <div class="top-header-tip">
@@ -111,12 +115,7 @@
           </div>
           <!-- 中间信息结束 -->
         </el-col>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
+        <br><br><br><br><br><br>
         <el-col :span="6">
           <!-- 右侧区域开始 -->
           <div class="main-right">
@@ -614,10 +613,10 @@ export default {
     this.startQueryData()
 
     let self = this
-    // 定义定时器，隔 60 秒刷新一次
+    // 定义定时器，隔 5 分钟刷新一次
     this.timer = setInterval(() => {
       self.startQueryData()
-    }, 60000)
+    }, 1000*60*5)
   },
   beforeDestroy() {
     clearInterval(this.timer)
@@ -639,6 +638,14 @@ h1 {
 .top-header {
   position: relative;
   margin-bottom: 10px;
+}
+.top-header-left{
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  padding: 20px 20px;
+  text-align: right;
+  left: 0;
 }
 .top-header-tip {
   font-size: 14px;
@@ -721,5 +728,11 @@ h1 {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+a{
+  text-decoration: none;
+}
+.router-link-active {
+  text-decoration: none;
 }
 </style>
